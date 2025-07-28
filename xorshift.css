@@ -1,0 +1,21 @@
+.control-list {
+  max-height: 6rem;
+  overflow: scroll;
+}
+
+.control-list label {
+  display: block;
+}
+
+.control-list-container {
+  min-width: 100px;
+  padding: 10px;
+}
+
+.controls-row {
+  display: flex;
+}
+
+.stats {
+  padding-left: 10px;
+}

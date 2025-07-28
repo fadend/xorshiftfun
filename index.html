@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fun with Xorshift</title>
+    <link href="xorshift.css" rel="stylesheet" />
+    <script
+      src="https://cdn.plot.ly/plotly-3.0.1.min.js"
+      charset="utf-8"
+    ></script>
+  </head>
+  <body>
+    <div class="control-list-container">
+      <label> Seed: <input size="20" id="seed" value="1" /></label>
+    </div>
+    <div class="controls-row">
+      <div class="control-list-container">
+        <div class="control-list-label">Constants: a, b, c:</div>
+        <div class="control-list" id="abc-radio-buttons"></div>
+      </div>
+      <div class="control-list-container">
+        <div class="control-list-label">Update step:</div>
+        <div class="control-list" id="step-radio-buttons"></div>
+      </div>
+    </div>
+    <div class="control-list-container">
+      <label>
+        Delay between samples:
+        <input
+          id="delay"
+          type="range"
+          value="500"
+          min="100"
+          max="1000"
+          step="10"
+      /></label>
+    </div>
+    <div class="stats">
+      Last draw: <span id="last-draw"></span>
+      <br />
+      Num samples: <span id="num-samples"></span>
+      <div id="scatter"></div>
+    </div>
+    <script src="xorshift.js"></script>
+    <p>
+      See
+      <a href="https://en.wikipedia.org/wiki/Xorshift"
+        >the Wikipedia entry on Xorshift</a
+      >
+      and
+      <a href="https://www.jstatsoft.org/article/view/v008i14"
+        >Marsaglia's 2003 article introducing it</a
+      >.
+    </p>
+  </body>
+</html>
